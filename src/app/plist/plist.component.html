@@ -1,0 +1,36 @@
+
+  
+<p> You've entered: {{textValue}}</p>
+        <input #textbox type="text" [(ngModel)]="textValue" required> 
+        <button (click)="logText(textbox.value)">Search</button>
+      
+        
+       
+<h4 class="header Divider">
+List of Patients
+</h4>
+
+<table class="cell Table">
+
+<thead>
+
+<tr>
+<th>FName</th>
+<th>LName</th>
+<th>Email</th>
+<th>DoctorLName</th>
+</tr>
+
+</thead>
+
+<tr *ngFor="let p of patients">
+
+<td>{{p.firstName}}</td>
+<td>{{p.lastName}}</td>
+<td>{{p.emailAddress}}</td>
+<td>{{p.doctorLastName}}</td>
+
+</tr>
+
+
+</table>

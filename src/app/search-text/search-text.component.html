@@ -1,0 +1,11 @@
+<p>
+  search-text works!
+
+</p>
+
+
+<p> You've entered: {{textValue}}</p>
+        <input #textbox type="text" [(ngModel)]="textValue" required> 
+        <button (click)="logText(textbox.value)">Search</button>
+      
+        
